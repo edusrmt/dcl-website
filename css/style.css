@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Athelas";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Athelas Regular"), url("../fonts/Athelas-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Athelas";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Athelas Italic"), url("../fonts/Athelas-Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Athelas";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Athelas Bold"), url("../fonts/Athelas-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Athelas";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Athelas Bold Italic"), url("../fonts/Athelas-BoldItalic.woff") format("woff");
+}
+body {
+  margin: 0;
+  background-color: #030C1C;
+  color: white;
+  font-family: Athelas, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 80px;
+  width: 100vw;
+  padding: 30px 8vw;
+}
+
+section {
+  padding: 8vw;
+}
+
+#sobre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 58vh;
+}
+#sobre .metade {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+#sobre .metade:first-child {
+  justify-content: space-between;
+}
+#sobre h1 {
+  margin: 0;
+}
+#sobre p {
+  font-size: 12px;
+}
+#sobre a {
+  font-size: 8px;
+  width: 50%;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  margin-bottom: 12vw;
+}
+#sobre img {
+  width: 48vw;
+  margin-left: 2vw;
+}
+
+#areas {
+  background-color: white;
+}
+#areas h1 {
+  color: #030C1C;
+}
+#areas h2 {
+  color: #030C1C;
+  margin-bottom: 0;
+}
+#areas .area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  border: 1px solid #989898;
+  box-sizing: border-box;
+}
+#areas .area + .area {
+  margin-top: 10px;
+}
+#areas img {
+  border: 1px solid #989898;
+  border-radius: 50%;
+  width: 70px;
+}
+
+#contato input {
+  border: 1px solid white;
+  width: 100%;
+  background-color: #030C1C;
+  box-sizing: border-box;
+  padding: 0 4vw;
+  margin-bottom: 10px;
+  height: 40px;
+}
+#contato textarea {
+  border: 1px solid white;
+  width: 100%;
+  background-color: #030C1C;
+  box-sizing: border-box;
+  padding: 0 4vw;
+  margin-bottom: 10px;
+  height: 160px;
+  padding-top: 15px;
+}
+#contato input::placeholder, #contato textarea::placeholder {
+  color: white;
+}
+#contato input[type=submit] {
+  background-color: white;
+  color: #030C1C;
+  text-align: left;
+}
+
+iframe {
+  width: 100%;
+  height: 30vh;
+  border: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 80px;
+  width: 100vw;
+  padding: 30px 8vw;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */
