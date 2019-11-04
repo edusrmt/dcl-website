@@ -36,7 +36,8 @@ html
                             | Dolor sit amet consectur et.
                             br
                             | Lorem ipsum dolor sit amet
-                        a.call Link to action                
+                        a.call Link to action
+
                 div.mySlides.fade
                     img(src="../img/slider-two.jpg", alt="Imagens do escritório")
                     div.text
@@ -90,21 +91,35 @@ html
                 br.mobile
                 | atuação
             .areas-container
-                each val in [1,2,3,4]
                     .area
-                        img.area-icon(src="../img/logo.png", alt="")
-                        h2 Lorem Ipsum
+                        img.area-icon(src="../img/administrativo.png", alt="")
+                        h2 Administrativo
+                    .area
+                        img.area-icon(src="../img/civil.png", alt="")
+                        h2 Civil
+                    .area
+                        img.area-icon(src="../img/criminal.png", alt="")
+                        h2 Criminal
+                    .area
+                        img.area-icon(src="../img/constitucional.png", alt="")
+                        h2 Constitucional
 
         section#contato
-            h1
-                | Fale 
-                br.mobile
-                | conosco
-            form
-                input(type="text" placeholder="Nome")
-                input(type="email", placeholder="E-mail")
-                textarea(placeholder="Mensagem", cols="30", rows="10")
-                input(type="submit", value="Enviar")
+            .metade
+                h1
+                    | Fale 
+                    br.mobile
+                    | conosco
+                form
+                    input(type="text" placeholder="Nome")
+                    input(type="email", placeholder="E-mail")
+                    textarea(placeholder="Mensagem", cols="30", rows="10")
+                    input(type="submit", value="Enviar")
+            .metade
+                img(src="../img/localizacao-icon.png", alt="")
+                p Av. Hermes da Fonseca, 957 - Tirol, Natal - RN, 59014-555
+                img(src="../img/telefone-icon.png", alt="")
+                p (84) 3216-2300
 
         iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6915.51224628771!2d-35.20085893158456!3d-5.794211887775996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3001ba5232eeb%3A0xc6d2ce6d9f807733!2sEscrit%C3%B3rio%20Advocacia%20Professor%20Di%C3%B3genes%20Cunha%20Lima!5e0!3m2!1spt-BR!2sbr!4v1572312689972!5m2!1spt-BR!2sbr")
 
