@@ -7,10 +7,64 @@ html
         link(rel="stylesheet", href="../css/style.css")
     body
         header
-            img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
-            img.menu(src="../img/menu.png", alt="Abrir menu")
+            //
+                img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
+                img.menu(src="../img/menu.png", alt="Abrir menu")
+
+            .navegacao
+                img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
+                a#main-menu-toggle.menu-toggle(href='#main-menu')
+                    img.icon(src="../img/menu.png", alt="Abrir menu")
+                nav#main-menu.main-menu
+                    a.menu-close(href='#')
+                        img.icon(src='../img/x-mark.png', alt='Fechar menu')
+                    ul
+                        li
+                            a(href='#inicio') Início 
+                        li
+                            a(href='#nossa-historia') Nossa História  
+                        li
+                            a(href='#professor') O Professor            
+                        li
+                            a(href='#equipe') Equipe
+                        li
+                            a(href='#blog') Blog    
 
         section#inicio
+
+            .slideshow-container
+                .mySlides.fade
+                    img(src="../img/slider-one.jpg", alt="Imagens do escritório")
+                    .text
+                        h1 Lorem Ipsum
+                        p
+                            | Dolor sit amet consectur et.
+                            br
+                            | Lorem ipsum dolor sit amet
+                        a Link to action                
+                div.mySlides.fade
+                    img(src="../img/slider-two.jpg", alt="Imagens do escritório")
+                    div.text
+                        h1 Lorem Ipsum
+                        p
+                            | Dolor sit amet consectur et.
+                            br
+                            | Lorem ipsum dolor sit amet
+                        a Link to action     
+
+                div.mySlides.fade
+                    img(src="../img/slider-three.jpg", alt="Imagens do escritório")
+                    div.text
+                        h1 Lorem Ipsum
+                        p
+                            | Dolor sit amet consectur et.
+                            br
+                            | Lorem ipsum dolor sit amet
+                        a Link to action
+
+                a.prev(onclick="plusSlides(-1)") &#10094;
+                a.next(onclick="plusSlides(1)") &#10095;
+
 
         section#sobre
             .metade
@@ -62,3 +116,5 @@ html
         footer
             img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
             p Desenvolvido por Eduardo e Jemima
+
+        script(src="../js/carousel.js")

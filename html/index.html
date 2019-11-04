@@ -7,8 +7,46 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <header><img class="logo" src="../img/logo.png" alt="Logotipo do Escritório"><img class="menu" src="../img/menu.png" alt="Abrir menu"></header>
-    <section id="inicio"></section>
+    <header>
+      <!--
+      img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
+      img.menu(src="../img/menu.png", alt="Abrir menu")
+      
+      -->
+      <div class="navegacao"><img class="logo" src="../img/logo.png" alt="Logotipo do Escritório"><a class="menu-toggle" id="main-menu-toggle" href="#main-menu"><img class="icon" src="../img/menu.png" alt="Abrir menu"></a>
+        <nav class="main-menu" id="main-menu"><a class="menu-close" href="#"><img class="icon" src="../img/x-mark.png" alt="Fechar menu"></a>
+          <ul>
+            <li><a href="#inicio">Início </a></li>
+            <li><a href="#nossa-historia">Nossa História  </a></li>
+            <li><a href="#professor">O Professor            </a></li>
+            <li><a href="#equipe">Equipe</a></li>
+            <li><a href="#blog">Blog    </a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="inicio">
+      <div class="slideshow-container">
+        <div class="mySlides fade"><img src="../img/slider-one.jpg" alt="Imagens do escritório">
+          <div class="text">
+            <h1>Lorem Ipsum</h1>
+            <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a>Link to action                </a>
+          </div>
+        </div>
+        <div class="mySlides fade"><img src="../img/slider-two.jpg" alt="Imagens do escritório">
+          <div class="text">
+            <h1>Lorem Ipsum</h1>
+            <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a>Link to action     </a>
+          </div>
+        </div>
+        <div class="mySlides fade"><img src="../img/slider-three.jpg" alt="Imagens do escritório">
+          <div class="text">
+            <h1>Lorem Ipsum</h1>
+            <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a>Link to action</a>
+          </div>
+        </div><a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
     <section id="sobre">
       <div class="metade">
         <h1>Sobre<br>nós</h1>
@@ -59,5 +97,6 @@
     <footer><img class="logo" src="../img/logo.png" alt="Logotipo do Escritório">
       <p>Desenvolvido por Eduardo e Jemima</p>
     </footer>
+    <script src="../js/carousel.js"></script>
   </body>
 </html>
