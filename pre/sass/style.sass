@@ -28,13 +28,26 @@ $mid-grey: #989898
 
 $page-margin: 10vw
 
+@mixin phone
+  @media screen and ( max-width: 899px )
+    @content
+
+@mixin desktop
+  @media screen and ( min-width: 900px )
+    @content 
+
 @mixin input-style
     border: 1px solid white
     width: 100%
     background-color: $dark-blue
     box-sizing: border-box
-    padding: 0 (0.5 * $page-margin)
     margin-bottom: 10px
+
+    @include phone
+        padding-left: 0.5 * $page-margin
+
+    @include desktop
+        padding-left: 0.3 * $page-margin
 
 body
     margin: 0
@@ -43,12 +56,24 @@ body
     font-family: Athelas, sans-serif
     overflow-x: hidden
 
-section a
-    font-size: 8px
-    width: 50%
+    @include desktop
+        font-size: 20px
+
+.call
+    padding: 0 20px 0 2px
     text-transform: uppercase
     border-bottom: 1px solid white
     margin-bottom: 1.5 * $page-margin
+
+    @include phone
+        font-size: 8px
+
+    @include desktop
+        font-size: 14px
+
+@include desktop
+    .mobile
+        display: none
 
 header
     display: flex
@@ -58,7 +83,7 @@ header
     box-sizing: border-box
     height: 80px
     width: 100vw
-    padding: 30px $page-margin
+    padding: 30px $page-margin   
 
     .navegacao
         display: flex
@@ -68,48 +93,70 @@ header
         justify-content: space-between
 
     .main-menu 
-        display: none
-        position: fixed
-        top: 0
-        right: -70%
-        height: 100vh
-        width: 70%
-        box-sizing: border-box
-        box-shadow: -3px 0 12px #00000026
-        overflow-y: scroll
-        overflow-x: visible
-        background-color: #FFFFFF
-        transition: right 0.3s ease, box-shadow 0.3s ease
-        z-index: 1     
-        padding: 30px $page-margin
+        @include phone
+            display: none
+            position: fixed
+            top: 0
+            right: -70%
+            height: 100vh
+            width: 70%
+            box-sizing: border-box
+            box-shadow: -3px 0 12px #00000026
+            overflow-y: scroll
+            overflow-x: visible
+            background-color: #FFFFFF
+            transition: right 0.3s ease, box-shadow 0.3s ease
+            z-index: 1     
+            padding: 30px $page-margin
 
-        &:target      
-            display: flex
-            flex-direction: column
-            justify-content: flex-start
-            align-items: flex-end
-            right: 0
-            outline: none
+            &:target      
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                align-items: flex-end
+                right: 0
+                outline: none
 
-        li:first-child
-            padding-top: 3rem
+            li:first-child
+                padding-top: 3rem
 
         ul
             list-style: none
 
+            @include desktop
+                margin: 0
+
         li
-            padding: 2rem 0 1rem 2rem    
+            @include phone
+                padding: 2rem 0 1rem 2rem    
+
+            @include desktop
+                float: left
+                padding-left: 3rem
         
         a
             text-decoration: none
-            color: black
             float: right
+
+            @include phone
+                color: #505050
+
+            @include desktop
+                color: whitesmoke
 
         li a
             font-size: 0.9rem
 
+    @include desktop
+        .menu-toggle, .menu-close
+            display: none
+
 section
-    padding: $page-margin
+    @include phone
+        padding: $page-margin
+
+    @include desktop
+        padding: (0.5 * $page-margin) $page-margin
 
 #inicio
     padding: 0
@@ -132,9 +179,14 @@ section
     .mySlides
         display: none
         overflow: hidden
+        height: 80vh
 
         img
-            height: 80vh            
+            @include phone
+                height: 80vh            
+
+            @include desktop
+                width: 100vw
 
     .prev, .next
         cursor: pointer
@@ -152,6 +204,7 @@ section
         background-color: white
         color: #39383C
         border-radius: 50%
+        box-shadow: 0 0 10px $dark-blue
 
     /* Position the "next button" to the right */
     .next 
@@ -164,12 +217,17 @@ section
     .text
         background-image: linear-gradient(to bottom, rgba($dark-blue, 0), $dark-blue)
         color: #f2f2f2
-        font-size: 15px
         position: absolute
         bottom: 0
         padding-bottom: 40px
         width: 100%
         text-align: center
+
+        @include phone
+            font-size: 15px
+
+        @include desktop
+            font-size: 18px
 
     /* Number text (1/3 etc) */
     .numbertext
@@ -226,15 +284,30 @@ section
     h1
         margin: 0
 
-    p
-        font-size: 12px    
+    @include phone
+        p
+            font-size: 12px
+
+    @include desktop
+        p
+            line-height: 2rem
+
+        .call
+            margin-bottom: 0
 
     img
         width: 48vw
         margin-left: 4vw
 
 #areas
-    background-color: white    
+    background-color: white   
+
+    @include desktop
+        .areas-container
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
 
     h1
         color: $dark-blue
@@ -243,15 +316,23 @@ section
         color: $dark-blue
         margin-bottom: 0
 
+        @include desktop
+            font-size: 22px
+
     .area
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        width: 100%
         height: 180px
         border: 1px solid $mid-grey
         box-sizing: border-box
+
+        @include phone
+            width: 100%
+
+        @include desktop
+            width: 24%
 
     .area + .area
         margin-top: 10px    
@@ -279,10 +360,22 @@ section
         color: $dark-blue
         text-align: left
 
+    @include desktop
+        form
+            width: 60%
+            display: flex
+            flex-direction: column
+            align-items: center
+
 iframe
     width: 100%
-    height: 30vh
     border: none
+
+    @include phone
+        height: 30vh
+
+    @include desktop
+        height: 60vh
 
 footer
     display: flex

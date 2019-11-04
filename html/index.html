@@ -8,11 +8,6 @@
   </head>
   <body>
     <header>
-      <!--
-      img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
-      img.menu(src="../img/menu.png", alt="Abrir menu")
-      
-      -->
       <div class="navegacao"><img class="logo" src="../img/logo.png" alt="Logotipo do Escritório"><a class="menu-toggle" id="main-menu-toggle" href="#main-menu"><img class="icon" src="../img/menu.png" alt="Abrir menu"></a>
         <nav class="main-menu" id="main-menu"><a class="menu-close" href="#"><img class="icon" src="../img/x-mark.png" alt="Fechar menu"></a>
           <ul>
@@ -30,26 +25,26 @@
         <div class="mySlides fade"><img src="../img/slider-one.jpg" alt="Imagens do escritório">
           <div class="text">
             <h1>Lorem Ipsum</h1>
-            <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a>Link to action                </a>
+            <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a class="call">Link to action                </a>
           </div>
         </div>
         <div class="mySlides fade"><img src="../img/slider-two.jpg" alt="Imagens do escritório">
           <div class="text">
             <h1>Lorem Ipsum</h1>
-            <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a>Link to action     </a>
+            <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a class="call">Link to action     </a>
           </div>
         </div>
         <div class="mySlides fade"><img src="../img/slider-three.jpg" alt="Imagens do escritório">
           <div class="text">
             <h1>Lorem Ipsum</h1>
-            <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a>Link to action</a>
+            <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a class="call">Link to action</a>
           </div>
         </div><a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
     </section>
     <section id="sobre">
       <div class="metade">
-        <h1>Sobre<br>nós</h1>
+        <h1>Sobre <br class="mobile">nós</h1>
         <p>
           Lorem ipsum dolor sit amet.
           Lorem ipsum dolor sit amet.
@@ -64,28 +59,30 @@
           Lorem ipsum dolor sit amet.
           Lorem ipsum dolor sit amet.
           Lorem ipsum dolor sit amet.
-        </p><a>Nossa história           </a>
+        </p><a class="call">Nossa história           </a>
       </div>
       <div class="metade"><img src="../img/escritorio.png" alt="Escritório"></div>
     </section>
     <section id="areas">
       <h1>
-         Áreas de<br>atuação</h1>
-      <div class="area"><img class="area-icon" src="../img/logo.png" alt="">
-        <h2>Lorem Ipsum</h2>
-      </div>
-      <div class="area"><img class="area-icon" src="../img/logo.png" alt="">
-        <h2>Lorem Ipsum</h2>
-      </div>
-      <div class="area"><img class="area-icon" src="../img/logo.png" alt="">
-        <h2>Lorem Ipsum</h2>
-      </div>
-      <div class="area"><img class="area-icon" src="../img/logo.png" alt="">
-        <h2>Lorem Ipsum</h2>
+         Áreas de <br class="mobile">atuação</h1>
+      <div class="areas-container">
+        <div class="area"><img class="area-icon" src="../img/logo.png" alt="">
+          <h2>Lorem Ipsum</h2>
+        </div>
+        <div class="area"><img class="area-icon" src="../img/logo.png" alt="">
+          <h2>Lorem Ipsum</h2>
+        </div>
+        <div class="area"><img class="area-icon" src="../img/logo.png" alt="">
+          <h2>Lorem Ipsum</h2>
+        </div>
+        <div class="area"><img class="area-icon" src="../img/logo.png" alt="">
+          <h2>Lorem Ipsum</h2>
+        </div>
       </div>
     </section>
     <section id="contato">
-      <h1>Fale<br>conosco</h1>
+      <h1>Fale <br class="mobile">conosco</h1>
       <form>
         <input type="text" placeholder="Nome">
         <input type="email" placeholder="E-mail">

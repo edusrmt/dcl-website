@@ -7,10 +7,6 @@ html
         link(rel="stylesheet", href="../css/style.css")
     body
         header
-            //
-                img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
-                img.menu(src="../img/menu.png", alt="Abrir menu")
-
             .navegacao
                 img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
                 a#main-menu-toggle.menu-toggle(href='#main-menu')
@@ -31,7 +27,6 @@ html
                             a(href='#blog') Blog    
 
         section#inicio
-
             .slideshow-container
                 .mySlides.fade
                     img(src="../img/slider-one.jpg", alt="Imagens do escritório")
@@ -41,7 +36,7 @@ html
                             | Dolor sit amet consectur et.
                             br
                             | Lorem ipsum dolor sit amet
-                        a Link to action                
+                        a.call Link to action                
                 div.mySlides.fade
                     img(src="../img/slider-two.jpg", alt="Imagens do escritório")
                     div.text
@@ -50,7 +45,7 @@ html
                             | Dolor sit amet consectur et.
                             br
                             | Lorem ipsum dolor sit amet
-                        a Link to action     
+                        a.call Link to action     
 
                 div.mySlides.fade
                     img(src="../img/slider-three.jpg", alt="Imagens do escritório")
@@ -60,17 +55,16 @@ html
                             | Dolor sit amet consectur et.
                             br
                             | Lorem ipsum dolor sit amet
-                        a Link to action
+                        a.call Link to action
 
                 a.prev(onclick="plusSlides(-1)") &#10094;
                 a.next(onclick="plusSlides(1)") &#10095;
 
-
         section#sobre
             .metade
                 h1
-                    | Sobre
-                    br
+                    | Sobre 
+                    br.mobile
                     | nós
                 p.
                     Lorem ipsum dolor sit amet.
@@ -86,24 +80,25 @@ html
                     Lorem ipsum dolor sit amet.
                     Lorem ipsum dolor sit amet.
                     Lorem ipsum dolor sit amet.
-                a Nossa história           
+                a.call Nossa história           
             .metade
                 img(src="../img/escritorio.png", alt="Escritório")
 
         section#areas
             h1 
-                | Áreas de
-                br
+                | Áreas de 
+                br.mobile
                 | atuação
-            each val in [1,2,3,4]
-                .area
-                    img.area-icon(src="../img/logo.png", alt="")
-                    h2 Lorem Ipsum
+            .areas-container
+                each val in [1,2,3,4]
+                    .area
+                        img.area-icon(src="../img/logo.png", alt="")
+                        h2 Lorem Ipsum
 
         section#contato
             h1
-                | Fale
-                br
+                | Fale 
+                br.mobile
                 | conosco
             form
                 input(type="text" placeholder="Nome")

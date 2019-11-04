@@ -29,15 +29,34 @@ body {
   font-family: Athelas, sans-serif;
   overflow-x: hidden;
 }
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 20px;
+  }
+}
 
-section a {
-  font-size: 8px;
-  width: 50%;
+.call {
+  padding: 0 20px 0 2px;
   text-transform: uppercase;
   border-bottom: 1px solid white;
   margin-bottom: 15vw;
 }
+@media screen and (max-width: 899px) {
+  .call {
+    font-size: 8px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .call {
+    font-size: 14px;
+  }
+}
 
+@media screen and (min-width: 900px) {
+  .mobile {
+    display: none;
+  }
+}
 header {
   display: flex;
   flex-direction: row;
@@ -55,50 +74,86 @@ header .navegacao {
   width: 100%;
   justify-content: space-between;
 }
-header .main-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: -70%;
-  height: 100vh;
-  width: 70%;
-  box-sizing: border-box;
-  box-shadow: -3px 0 12px #00000026;
-  overflow-y: scroll;
-  overflow-x: visible;
-  background-color: #FFFFFF;
-  transition: right 0.3s ease, box-shadow 0.3s ease;
-  z-index: 1;
-  padding: 30px 10vw;
-}
-header .main-menu:target {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  right: 0;
-  outline: none;
-}
-header .main-menu li:first-child {
-  padding-top: 3rem;
+@media screen and (max-width: 899px) {
+  header .main-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -70%;
+    height: 100vh;
+    width: 70%;
+    box-sizing: border-box;
+    box-shadow: -3px 0 12px #00000026;
+    overflow-y: scroll;
+    overflow-x: visible;
+    background-color: #FFFFFF;
+    transition: right 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+    padding: 30px 10vw;
+  }
+  header .main-menu:target {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    right: 0;
+    outline: none;
+  }
+  header .main-menu li:first-child {
+    padding-top: 3rem;
+  }
 }
 header .main-menu ul {
   list-style: none;
 }
-header .main-menu li {
-  padding: 2rem 0 1rem 2rem;
+@media screen and (min-width: 900px) {
+  header .main-menu ul {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 899px) {
+  header .main-menu li {
+    padding: 2rem 0 1rem 2rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  header .main-menu li {
+    float: left;
+    padding-left: 3rem;
+  }
 }
 header .main-menu a {
   text-decoration: none;
-  color: black;
   float: right;
+}
+@media screen and (max-width: 899px) {
+  header .main-menu a {
+    color: #505050;
+  }
+}
+@media screen and (min-width: 900px) {
+  header .main-menu a {
+    color: whitesmoke;
+  }
 }
 header .main-menu li a {
   font-size: 0.9rem;
 }
+@media screen and (min-width: 900px) {
+  header .menu-toggle, header .menu-close {
+    display: none;
+  }
+}
 
-section {
-  padding: 10vw;
+@media screen and (max-width: 899px) {
+  section {
+    padding: 10vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  section {
+    padding: 5vw 10vw;
+  }
 }
 
 #inicio {
@@ -127,9 +182,17 @@ section {
 #inicio .mySlides {
   display: none;
   overflow: hidden;
-}
-#inicio .mySlides img {
   height: 80vh;
+}
+@media screen and (max-width: 899px) {
+  #inicio .mySlides img {
+    height: 80vh;
+  }
+}
+@media screen and (min-width: 900px) {
+  #inicio .mySlides img {
+    width: 100vw;
+  }
 }
 #inicio .prev, #inicio .next {
   cursor: pointer;
@@ -147,6 +210,7 @@ section {
   background-color: white;
   color: #39383C;
   border-radius: 50%;
+  box-shadow: 0 0 10px #030C1C;
 }
 #inicio .next {
   right: 10vw;
@@ -157,12 +221,21 @@ section {
 #inicio .text {
   background-image: linear-gradient(to bottom, rgba(3, 12, 28, 0), #030C1C);
   color: #f2f2f2;
-  font-size: 15px;
   position: absolute;
   bottom: 0;
   padding-bottom: 40px;
   width: 100%;
   text-align: center;
+}
+@media screen and (max-width: 899px) {
+  #inicio .text {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 900px) {
+  #inicio .text {
+    font-size: 18px;
+  }
 }
 #inicio .numbertext {
   color: #f2f2f2;
@@ -219,8 +292,18 @@ section {
 #sobre h1 {
   margin: 0;
 }
-#sobre p {
-  font-size: 12px;
+@media screen and (max-width: 899px) {
+  #sobre p {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 900px) {
+  #sobre p {
+    line-height: 2rem;
+  }
+  #sobre .call {
+    margin-bottom: 0;
+  }
 }
 #sobre img {
   width: 48vw;
@@ -230,6 +313,14 @@ section {
 #areas {
   background-color: white;
 }
+@media screen and (min-width: 900px) {
+  #areas .areas-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 #areas h1 {
   color: #030C1C;
 }
@@ -237,15 +328,29 @@ section {
   color: #030C1C;
   margin-bottom: 0;
 }
+@media screen and (min-width: 900px) {
+  #areas h2 {
+    font-size: 22px;
+  }
+}
 #areas .area {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 180px;
   border: 1px solid #989898;
   box-sizing: border-box;
+}
+@media screen and (max-width: 899px) {
+  #areas .area {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  #areas .area {
+    width: 24%;
+  }
 }
 #areas .area + .area {
   margin-top: 10px;
@@ -261,19 +366,37 @@ section {
   width: 100%;
   background-color: #030C1C;
   box-sizing: border-box;
-  padding: 0 5vw;
   margin-bottom: 10px;
   height: 40px;
+}
+@media screen and (max-width: 899px) {
+  #contato input {
+    padding-left: 5vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  #contato input {
+    padding-left: 3vw;
+  }
 }
 #contato textarea {
   border: 1px solid white;
   width: 100%;
   background-color: #030C1C;
   box-sizing: border-box;
-  padding: 0 5vw;
   margin-bottom: 10px;
   height: 160px;
   padding-top: 15px;
+}
+@media screen and (max-width: 899px) {
+  #contato textarea {
+    padding-left: 5vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  #contato textarea {
+    padding-left: 3vw;
+  }
 }
 #contato input::placeholder, #contato textarea::placeholder {
   color: white;
@@ -283,11 +406,28 @@ section {
   color: #030C1C;
   text-align: left;
 }
+@media screen and (min-width: 900px) {
+  #contato form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 iframe {
   width: 100%;
-  height: 30vh;
   border: none;
+}
+@media screen and (max-width: 899px) {
+  iframe {
+    height: 30vh;
+  }
+}
+@media screen and (min-width: 900px) {
+  iframe {
+    height: 60vh;
+  }
 }
 
 footer {
