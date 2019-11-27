@@ -160,6 +160,10 @@ header .main-menu li a {
   }
 }
 
+main.no-padding {
+  padding: 0;
+}
+
 @media screen and (max-width: 899px) {
   main h1 {
     text-align: center;
@@ -172,16 +176,59 @@ main img {
 main p {
   text-align: justify;
 }
+@media screen and (min-width: 900px) {
+  main.no-padding h1 {
+    padding: 20px;
+  }
+}
 main .equipe {
+  width: 100%;
+  transition: 0.1s ease-in-out;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
-main .equipe img {
-  width: 40vw;
+main .equipe .membro {
+  width: 100%;
+  opacity: 0.5;
+  transition: 0.1s ease-in-out;
+  margin-top: -4px;
 }
-main .equipe .info {
-  width: 40vh;
+@media screen and (min-width: 900px) {
+  main .equipe .membro {
+    width: 33.333%;
+    margin-top: -5px;
+  }
+}
+main .equipe .membro img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin: 0;
+}
+main .equipe .membro .info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+main .equipe .membro:hover {
+  opacity: 1;
+  transition: 0.1s ease-in-out;
+}
+main .equipe .membro.collapsed .info {
+  max-height: 0px;
+  padding: 0;
+  transition: 0.3s ease-in-out;
+  text-overflow: ellipsis;
+}
+main .equipe .membro.collapsed .info p {
+  width: 100%;
+}
+main .equipe .membro.collapsed .info h2, main .equipe .membro.collapsed .info p {
+  overflow: auto;
+  text-overflow: ellp;
 }
 
 #inicio {
@@ -198,6 +245,10 @@ main .equipe .info {
 }
 #inicio h1 {
   margin-bottom: 0;
+}
+#inicio a {
+  text-decoration: none;
+  color: white;
 }
 #inicio .slideshow-container {
   position: relative;
@@ -302,22 +353,40 @@ main .equipe .info {
 
 #sobre {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#sobre .container {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-#sobre .metade {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 70%;
-  height: 100%;
+@media screen and (max-width: 899px) {
+  #sobre .container {
+    flex-direction: column;
+  }
 }
-#sobre .metade:first-child {
-  justify-content: space-between;
+@media screen and (min-width: 900px) {
+  #sobre .container {
+    flex-direction: row;
+  }
+  #sobre .container div {
+    padding: 0 30px;
+  }
 }
 #sobre h1 {
   margin: 0;
+}
+#sobre h3 {
+  margin-bottom: 0;
+}
+#sobre a {
+  text-decoration: none;
+  color: white;
+}
+#sobre p {
+  text-align: justify;
+  margin-top: 0;
 }
 @media screen and (max-width: 899px) {
   #sobre p {
@@ -346,20 +415,26 @@ main .equipe .info {
 
 #areas {
   background-color: white;
-  /* The Modal (background) */
-  /* Modal Content */
-  /* Add Animation */
+  padding-top: 40px;
+}
+#areas .areas-container {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 899px) {
+  #areas .areas-container {
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 900px) {
   #areas .areas-container {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 }
 #areas h1 {
   color: #030C1C;
+  margin-bottom: 40px;
 }
 #areas h2 {
   color: #030C1C;
@@ -377,15 +452,32 @@ main .equipe .info {
   align-items: center;
   height: 180px;
   box-sizing: border-box;
+  box-shadow: 0 2.5px 10px -1px rgba(3, 12, 28, 0.25);
+  transition: 0.3s;
+  text-align: center;
+  border-radius: 5px;
+}
+#areas .area img {
+  height: 50px;
+}
+#areas .area:hover {
+  margin: -5px 0 5px 0;
+  box-shadow: 0 20px 40px -5px rgba(3, 12, 28, 0.25);
+}
+#areas .area a.mais {
+  text-decoration: underline;
+  color: #030C1C;
+  font-size: 15px;
 }
 @media screen and (max-width: 899px) {
   #areas .area {
-    width: 100%;
+    min-width: 80%;
   }
 }
 @media screen and (min-width: 900px) {
   #areas .area {
-    width: 24%;
+    min-width: 17%;
+    max-width: 17%;
   }
 }
 @media screen and (max-width: 899px) {
@@ -393,21 +485,58 @@ main .equipe .info {
     margin-top: 10px;
   }
 }
-#areas .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 40%;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
+@media screen and (min-width: 900px) {
+  #areas .area + .area {
+    margin-left: 10px;
+  }
 }
-#areas .card a {
-  text-decoration: underline;
-  color: #030C1C;
-  font-size: 15px;
+#areas .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
 }
-#areas .card:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+#areas .modal:target {
+  pointer-events: all;
+  opacity: 1;
+  transition: opacity 200ms;
+}
+#areas .modal .modal-inner {
+  position: absolute;
+  display: block;
+  padding: 48px;
+  line-height: 1.8;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: white;
+  color: #34495E;
+}
+#areas .modal .modal-inner h2 {
+  margin-top: 0;
+}
+#areas .modal .modal-inner code {
+  font-weight: bold;
+}
+#areas .modal a.close {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #34495E;
+  opacity: 0.5;
+  transition: opacity 200ms;
+}
+#areas .modal a.close:hover {
+  opacity: 0.4;
 }
 #areas .container {
   padding: 2px 16px;
@@ -416,76 +545,47 @@ main .equipe .info {
   border: none;
   width: 70px;
 }
-#areas .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-#areas .modal-content {
-  margin: 10% auto;
-  width: 60%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  animation-name: modalopen;
-  animation-duration: 1s;
-}
-#areas .modal-header h2, #areas .modal-footer h3 {
-  margin: 0;
-}
-#areas .modal-header {
-  background: #FFFFFF;
-  padding: 15px;
-  color: #030C1C;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  text-align: center;
-}
-#areas .modal-body {
-  padding: 10px 20px;
-  background: #fff;
-  color: #030C1C;
-}
-#areas .close {
-  color: #030C1C;
-  float: right;
-  font-size: 30px;
-}
-#areas .close:hover, #areas .close:focus {
-  color: #030C1C;
-  text-decoration: none;
-  cursor: pointer;
-}
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
+#contato .metade {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#contato .metade div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0;
+}
+#contato .metade div i {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  min-width: 30px;
+  font-size: 1.2rem;
+  margin: 0 5px 0 0;
+}
+@media screen and (max-width: 899px) {
+  #contato .metade .metade + .metade {
+    margin-top: 40px;
+  }
+}
 @media screen and (min-width: 900px) {
   #contato {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     height: 58vh;
   }
   #contato .metade {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 50%;
+    width: 60%;
     height: 100%;
   }
-  #contato .metade:first-child {
-    justify-content: space-between;
+  #contato .metade + .metade {
+    width: 30%;
   }
 }
 #contato input {
@@ -536,11 +636,16 @@ main .equipe .info {
   text-align: left;
 }
 @media screen and (min-width: 900px) {
+  #contato input[type=submit] {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 900px) {
   #contato form {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -562,7 +667,7 @@ iframe {
 footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
   height: 80px;

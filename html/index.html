@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <script src="https://kit.fontawesome.com/36213c14f9.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -31,27 +32,28 @@
         <div class="mySlides fade"><img src="../img/ambiente/salaAtendimento2.jpg" alt="Imagens do escritório">
           <div class="text">
             <h1>Nossa História</h1>
-            <p>Conheça mais sobre o escritório<br>lalaa</p><a class="call">Nossa História     </a>
+            <p>Conheça mais sobre o escritório<br>lalaa</p><a class="call" href="../html/historia.html">Nossa História    </a>
           </div>
         </div>
         <div class="mySlides fade"><img src="../img/ambiente/salaReuniao.jpg" alt="Imagens do escritório">
           <div class="text">
             <h1>Equipe</h1>
-            <p>Nossa equipe é formada por 10 advogados<br>prontos a te atender</p><a class="call">Equipe</a>
+            <p>Nossa equipe é formada por 10 advogados<br>prontos a te atender</p><a class="call" href="../html/equipe.html">Equipe</a>
           </div>
         </div>
         <div class="mySlides fade"><img src="../img/professor.jpg" alt="Imagens do escritório">
           <div class="text">
             <h1>Professor Diogenes</h1>
-            <p>Conheça mais sobre a história do professor e poeta<br>Diógenes da Cunha Lima</p><a class="call">O professor</a>
+            <p>Conheça mais sobre a história do professor e poeta<br>Diógenes da Cunha Lima</p><a class="call" href="../html/professor.html">O professor</a>
           </div>
         </div><a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
     </section>
     <section id="sobre">
-      <div class="metade">
-        <h1>Sobre <br class="mobile">nós
-          <h3>Missão</h3>
+      <h1>Sobre <br class="mobile">nós</h1>
+      <div class="container">
+        <div>
+          <h3>Missão                    </h3>
           <p>
             Assegurar com equilíbrio, a realização do Direito, garantindo, através de
             profissionais éticos e competentes, a segurança da assistência continuada,
@@ -59,11 +61,15 @@
             prevaleça na sociedade.
             
           </p>
-          <h3>Visão</h3>
+        </div>
+        <div>
+          <h3>Visão                </h3>
           <p>
             Ver o escritório como uma Instituição amada e respeitada no Estado. Nossos advogados são selecionados entre os melhores e procuram dar assistência jurídica a nível de  excelência. A cada dia um pouco mais.
             
           </p>
+        </div>
+        <div>
           <h3>Valores</h3>
           <p>
             São valores do Escritório o sentido e alcance das leis, doutrinas e 
@@ -71,47 +77,87 @@
             Ministério Público como parceiros no sentido de busca da Justiça; Fazer do “Pro Bono” um trabalho agradável e útil.
             
           </p>
-        </h1><a class="call">Nossa história           </a>
+        </div>
       </div>
-      <div class="metade"><img src="../img/ambiente/recepcao.jpg" alt="Escritório"></div>
     </section>
     <section id="areas">
       <h1>
          Áreas de <br class="mobile">atuação</h1>
       <div class="areas-container">
-        <div class="area card" id="modal-btn"><img class="area-icon" src="../img/areasAtuacao/civil.png" alt="">
+        <div class="area"><img class="area-icon" src="../img/areas/civil.svg" alt="">
           <div class="container">
-            <h2>Civil</h2><a href="#modal-btn">Saiba mais</a>
-          </div>
-          <div class="modal" id="my-modal">
-            <div class="modal-content">
-              <div class="modal-header"><span class="close">&times;</span>
-                <h2>Direito Civil</h2>
-              </div>
-              <div class="modal-body">
-                <p> O Direito Civil é uma das vertentes do Direito Privado cujo objetivo é determinar como as pessoas devem se relacionar e agir em sociedade, como por exemplo, o direito do nascituro, o casamento, a sucessão familiar por meio da herança e do legado, entre outros aspectos legais comuns as relações de uma sociedade civilizada.</p>
-              </div>
-            </div>
+            <h2>Civil</h2><a class="mais" href="#civil">Saiba mais</a>
           </div>
         </div>
-        <div class="area card" id="myBtn"><img class="area-icon" src="../img/areasAtuacao/criminal.svg" alt="">
+        <div class="area"><img class="area-icon" src="../img/areas/criminal.svg" alt="">
           <div class="container">
-            <h2>Criminal</h2><a href="#myBtn">Saiba mais</a>
+            <h2>Criminal</h2><a class="mais" href="#criminal">Saiba mais  </a>
           </div>
         </div>
-        <div class="area card" id="myBtn"><img class="area-icon" src="../img/areasAtuacao/imobiliario.svg" alt="">
+        <div class="area"><img class="area-icon" src="../img/areas/imobiliario.svg" alt="">
           <div class="container">
-            <h2>Imobiliário</h2><a href="#myBtn">Saiba mais</a>
+            <h2>Imobiliário</h2><a class="mais" href="#imobiliario">Saiba mais                </a>
           </div>
         </div>
-        <div class="area card" id="myBtn"><img class="area-icon" src="../img/areasAtuacao/constitucional.png" alt="">
+        <div class="area"><img class="area-icon" src="../img/areas/constitucional.svg" alt="">
           <div class="container">
-            <h2>Consumerista</h2><a href="#myBtn">Saiba mais</a>
+            <h2>Constitucional</h2><a class="mais" href="#constitucional">Saiba mais</a>
           </div>
         </div>
-        <div class="area card" id="myBtn"><img class="area-icon" src="../img/areasAtuacao/trabalhista.svg" alt="">
+        <div class="area"><img class="area-icon" src="../img/areas/trabalhista.svg" alt="">
           <div class="container">
-            <h2>Trabalhista</h2><a href="#myBtn">Saiba mais</a>
+            <h2>Trabalhista</h2><a class="mais" href="#trabalhista">Saiba mais                                              </a>
+          </div>
+        </div>
+        <div class="modal" id="civil"><a class="close" href="#areas"></a>
+          <div class="modal-inner">
+            <h2>Direito Civil</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
+              Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
+              ipsam repudiandae sint laborum sapiente?
+            </p>
+          </div>
+        </div>
+        <div class="modal" id="criminal"><a class="close" href="#areas"></a>
+          <div class="modal-inner">
+            <h2>Direito Criminal</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
+              Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
+              ipsam repudiandae sint laborum sapiente?
+            </p>
+          </div>
+        </div>
+        <div class="modal" id="imobiliario"><a class="close" href="#areas"></a>
+          <div class="modal-inner">
+            <h2>Direito Imobiliário</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
+              Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
+              ipsam repudiandae sint laborum sapiente?
+            </p>
+          </div>
+        </div>
+        <div class="modal" id="constitucional"><a class="close" href="#areas"></a>
+          <div class="modal-inner">
+            <h2>Direito Constitucional</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
+              Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
+              ipsam repudiandae sint laborum sapiente?
+            </p>
+          </div>
+        </div>
+        <div class="modal" id="trabalhista"><a class="close" href="#areas"></a>
+          <div class="modal-inner">
+            <h2>Direito Trabalhista</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
+              Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
+              ipsam repudiandae sint laborum sapiente? 
+              
+            </p>
           </div>
         </div>
       </div>
@@ -126,16 +172,16 @@
           <input type="submit" value="Enviar">
         </form>
       </div>
-      <div class="metade">
-        <p> <img src="../img/localizacao-icon.png" alt="">      Endereço:<br><br>Av. Hermes da Fonseca, 957 - Tirol, Natal - RN, 59014-555</p>
-        <p>   <img src="../img/telefone-icon.png" alt="">Telefone: (84) 3216-2300<br><br>Whatsapp: (84) 99407-4243</p>
+      <div class="metade"> 
+        <div><i class="fas fa-map-marker-alt">    </i><span>Av. Hermes da Fonseca, 957 - Tirol, Natal - RN, 59014-555</span></div>
+        <div>  <i class="fas fa-phone"></i><span>(84) 3216-2300</span></div>
+        <div><i class="fab fa-whatsapp"></i><span>(84) 99407-4243</span></div>
       </div>
     </section>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6915.51224628771!2d-35.20085893158456!3d-5.794211887775996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3001ba5232eeb%3A0xc6d2ce6d9f807733!2sEscrit%C3%B3rio%20Advocacia%20Professor%20Di%C3%B3genes%20Cunha%20Lima!5e0!3m2!1spt-BR!2sbr!4v1572312689972!5m2!1spt-BR!2sbr"></iframe>
-    <footer><img class="logo" src="../img/logo.png" alt="Logotipo do Escritório">
-      <p>Desenvolvido por <a href="https://edusrmt.github.io/"> Eduardo Sarmento</a> e <a href="https://jemimad.github.io/"> Jemima Dias</a></p>
+    <footer>
+      <p>Desenvolvido por <a href="https://edusrmt.github.io/"> Eduardo</a> & <a href="https://jemimad.github.io/">Jemima</a></p>
     </footer>
     <script src="../js/carousel.js"></script>
-    <script src="../js/modal.js"></script>
   </body>
 </html>

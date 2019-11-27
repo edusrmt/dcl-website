@@ -6,6 +6,7 @@ html
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         link(rel="stylesheet", href="../css/style.css")
         link(rel="shortcut icon", type="image/x-icon" href="../img/logo.ico")
+        script(src="https://kit.fontawesome.com/36213c14f9.js", crossorigin="anonymous")
 
     body
         include includes/header.pug
@@ -31,7 +32,7 @@ html
                             | Conheça mais sobre o escritório
                             br
                             | lalaa
-                        a.call Nossa História     
+                        a.call(href="../html/historia.html") Nossa História    
 
                 div.mySlides.fade
                     img(src="../img/ambiente/salaReuniao.jpg", alt="Imagens do escritório")
@@ -41,7 +42,8 @@ html
                             | Nossa equipe é formada por 10 advogados
                             br
                             | prontos a te atender
-                        a.call Equipe
+                        a.call(href="../html/equipe.html") Equipe
+
                 div.mySlides.fade
                     img(src="../img/professor.jpg", alt="Imagens do escritório")
                     div.text
@@ -50,31 +52,32 @@ html
                             | Conheça mais sobre a história do professor e poeta
                             br
                             | Diógenes da Cunha Lima
-                        a.call O professor
+                        a.call(href="../html/professor.html") O professor
 
                 a.prev(onclick="plusSlides(-1)") &#10094;
                 a.next(onclick="plusSlides(1)") &#10095;
 
         section#sobre
-            .metade
-                h1
-                    | Sobre 
-                    br.mobile
-                    | nós
+            h1
+                | Sobre 
+                br.mobile
+                | nós
 
-                    h3 Missão
-                    
+            .container
+                div
+                    h3 Missão                    
                     p.
                         Assegurar com equilíbrio, a realização do Direito, garantindo, através de
                         profissionais éticos e competentes, a segurança da assistência continuada,
                         contribuindo, como advocacia de excelência, para que a justiça aconteça e 
                         prevaleça na sociedade.
 
-                    h3 Visão
-                    
+                div
+                    h3 Visão                
                     p.
                         Ver o escritório como uma Instituição amada e respeitada no Estado. Nossos advogados são selecionados entre os melhores e procuram dar assistência jurídica a nível de  excelência. A cada dia um pouco mais.
 
+                div
                     h3 Valores
 
                     p.
@@ -82,53 +85,78 @@ html
                         jurisprudência; tratar o cliente com respeito e amizade, os Juízes e ao 
                         Ministério Público como parceiros no sentido de busca da Justiça; Fazer do “Pro Bono” um trabalho agradável e útil.
 
-                a.call Nossa história           
-            .metade
-                img(src="../img/ambiente/recepcao.jpg", alt="Escritório")
-
         section#areas
             h1 
                 | Áreas de 
                 br.mobile
                 | atuação
             .areas-container
-                    .area.card#modal-btn
-                        img.area-icon(src="../img/areasAtuacao/civil.png", alt="")
-                        .container
-                            h2 Civil
-                            a(href="#modal-btn") Saiba mais
-                        div#my-modal.modal
-                            .modal-content
-                                .modal-header
-                                    span.close &times;
-                                    h2 Direito Civil
-                                .modal-body
-                                    p  O Direito Civil é uma das vertentes do Direito Privado cujo objetivo é determinar como as pessoas devem se relacionar e agir em sociedade, como por exemplo, o direito do nascituro, o casamento, a sucessão familiar por meio da herança e do legado, entre outros aspectos legais comuns as relações de uma sociedade civilizada.
-
-                    .area.card#myBtn
-                        img.area-icon(src="../img/areasAtuacao/criminal.svg", alt="")
-                        .container
-                            h2 Criminal
-                            a(href="#myBtn") Saiba mais
-
-                    .area.card#myBtn
-                        img.area-icon(src="../img/areasAtuacao/imobiliario.svg", alt="")
-                        .container
-                            h2 Imobiliário
-                            a(href="#myBtn") Saiba mais
-                    
-                    .area.card#myBtn
-                        img.area-icon(src="../img/areasAtuacao/constitucional.png", alt="")
-                        .container
-                            h2 Consumerista
-                            a(href="#myBtn") Saiba mais
-
-                    .area.card#myBtn
-                        img.area-icon(src="../img/areasAtuacao/trabalhista.svg", alt="")
-                        .container
-                            h2 Trabalhista
-                            a(href="#myBtn") Saiba mais
-                            
+                .area
+                    img.area-icon(src="../img/areas/civil.svg", alt="")
+                    .container
+                        h2 Civil
+                        a(href="#civil").mais Saiba mais
+                .area
+                    img.area-icon(src="../img/areas/criminal.svg", alt="")
+                    .container
+                        h2 Criminal
+                        a(href="#criminal").mais Saiba mais  
+                .area
+                    img.area-icon(src="../img/areas/imobiliario.svg", alt="")
+                    .container
+                        h2 Imobiliário
+                        a(href="#imobiliario").mais Saiba mais                
+                .area
+                    img.area-icon(src="../img/areas/constitucional.svg", alt="")
+                    .container
+                        h2 Constitucional
+                        a(href="#constitucional").mais Saiba mais
+                .area
+                    img.area-icon(src="../img/areas/trabalhista.svg", alt="")
+                    .container
+                        h2 Trabalhista
+                        a(href="#trabalhista").mais Saiba mais                                              
+                
+                #civil.modal
+                    a(href="#areas" class="close")
+                    .modal-inner
+                        h2 Direito Civil
+                        p.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
+                            Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
+                            ipsam repudiandae sint laborum sapiente?
+                #criminal.modal
+                    a(href="#areas" class="close")
+                    .modal-inner
+                        h2 Direito Criminal
+                        p.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
+                            Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
+                            ipsam repudiandae sint laborum sapiente?
+                #imobiliario.modal
+                    a(href="#areas" class="close")
+                    .modal-inner
+                        h2 Direito Imobiliário
+                        p.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
+                            Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
+                            ipsam repudiandae sint laborum sapiente?
+                #constitucional.modal
+                    a(href="#areas" class="close")
+                    .modal-inner
+                        h2 Direito Constitucional
+                        p.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
+                            Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
+                            ipsam repudiandae sint laborum sapiente?
+                #trabalhista.modal
+                    a(href="#areas" class="close")
+                    .modal-inner
+                        h2 Direito Trabalhista
+                        p.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
+                            Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
+                            ipsam repudiandae sint laborum sapiente? 
 
         section#contato
             .metade
@@ -141,24 +169,21 @@ html
                     input(type="email", placeholder="E-mail")
                     textarea(placeholder="Mensagem", cols="30", rows="10")
                     input(type="submit", value="Enviar")
-            .metade
-                p 
-                    img(src="../img/localizacao-icon.png", alt="")      
-                    |       Endereço:
-                    br
-                    br
-                    | Av. Hermes da Fonseca, 957 - Tirol, Natal - RN, 59014-555
+            .metade  
+                div
+                    i.fas.fa-map-marker-alt     
+                    span Av. Hermes da Fonseca, 957 - Tirol, Natal - RN, 59014-555
                     
-                p    
-                    img(src="../img/telefone-icon.png", alt="")
-                    | Telefone: (84) 3216-2300
-                    br
-                    br
-                    | Whatsapp: (84) 99407-4243
+                div   
+                    i.fas.fa-phone
+                    span (84) 3216-2300
+                    
+                div
+                    i.fab.fa-whatsapp
+                    span (84) 99407-4243
 
         iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6915.51224628771!2d-35.20085893158456!3d-5.794211887775996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3001ba5232eeb%3A0xc6d2ce6d9f807733!2sEscrit%C3%B3rio%20Advocacia%20Professor%20Di%C3%B3genes%20Cunha%20Lima!5e0!3m2!1spt-BR!2sbr!4v1572312689972!5m2!1spt-BR!2sbr")
 
         include includes/footer.pug
 
         script(src="../js/carousel.js")
-        script(src="../js/modal.js")
