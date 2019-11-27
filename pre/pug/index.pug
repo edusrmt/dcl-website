@@ -1,33 +1,14 @@
 doctype html
 html
     head
-        title Diógenes da Cunha Lima
+        title Escritório de Advocacia Professor Diógenes da Cunha Lima - Natal/RN
         meta(charset="utf-8")
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         link(rel="stylesheet", href="../css/style.css")
         link(rel="shortcut icon", type="image/x-icon" href="../img/logo.ico")
 
-
     body
-        header
-            .navegacao
-                img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
-                a#main-menu-toggle.menu-toggle(href='#main-menu')
-                    img.icon(src="../img/menu.png", alt="Abrir menu")
-                nav#main-menu.main-menu
-                    a.menu-close(href='#')
-                        img.icon(src='../img/x-mark.png', alt='Fechar menu')
-                    ul
-                        li
-                            a(href='#inicio') Início 
-                        li
-                            a(href='#nossa-historia') Nossa História  
-                        li
-                            a(href='#professor') O Professor            
-                        li
-                            a(href='#equipe') Equipe
-                        li
-                            a(href='#blog') Blog    
+        include includes/header.pug
 
         section#inicio
             .slideshow-container
@@ -68,7 +49,7 @@ html
                         p
                             | Conheça mais sobre a história do professor e poeta
                             br
-                            | Professor Diogenes da Cunha Lima
+                            | Diógenes da Cunha Lima
                         a.call O professor
 
                 a.prev(onclick="plusSlides(-1)") &#10094;
@@ -114,7 +95,7 @@ html
                     .area.card#modal-btn
                         img.area-icon(src="../img/areasAtuacao/civil.png", alt="")
                         .container
-                            h2 Direito Civil
+                            h2 Civil
                             a(href="#modal-btn") Saiba mais
                         div#my-modal.modal
                             .modal-content
@@ -127,25 +108,25 @@ html
                     .area.card#myBtn
                         img.area-icon(src="../img/areasAtuacao/criminal.svg", alt="")
                         .container
-                            h2 Direito Criminal
+                            h2 Criminal
                             a(href="#myBtn") Saiba mais
 
                     .area.card#myBtn
                         img.area-icon(src="../img/areasAtuacao/imobiliario.svg", alt="")
                         .container
-                            h2 Direito Imobiliário
+                            h2 Imobiliário
                             a(href="#myBtn") Saiba mais
                     
                     .area.card#myBtn
                         img.area-icon(src="../img/areasAtuacao/constitucional.png", alt="")
                         .container
-                            h2 Direito Consumerista
+                            h2 Consumerista
                             a(href="#myBtn") Saiba mais
 
                     .area.card#myBtn
                         img.area-icon(src="../img/areasAtuacao/trabalhista.svg", alt="")
                         .container
-                            h2 Direito Trabalhista
+                            h2 Trabalhista
                             a(href="#myBtn") Saiba mais
                             
 
@@ -177,12 +158,7 @@ html
 
         iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6915.51224628771!2d-35.20085893158456!3d-5.794211887775996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3001ba5232eeb%3A0xc6d2ce6d9f807733!2sEscrit%C3%B3rio%20Advocacia%20Professor%20Di%C3%B3genes%20Cunha%20Lima!5e0!3m2!1spt-BR!2sbr!4v1572312689972!5m2!1spt-BR!2sbr")
 
-        footer
-            img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
-            p Desenvolvido por 
-                a(href="https://edusrmt.github.io/")  Eduardo Sarmento 
-                |  e 
-                a(href="https://jemimad.github.io/")  Jemima Dias
+        include includes/footer.pug
 
         script(src="../js/carousel.js")
         script(src="../js/modal.js")

@@ -1,27 +1,29 @@
-@font-face
-    font-family: 'Athelas'
-    font-style: normal
-    font-weight: normal
-    src: local('Athelas Regular'), url('../fonts/Athelas-Regular.woff') format('woff')
+/*
+    @font-face
+        font-family: 'Athelas'
+        font-style: normal
+        font-weight: normal
+        src: local('Athelas Regular'), url('../fonts/Athelas-Regular.woff') format('woff')
 
-@font-face
-    font-family: 'Athelas'
-    font-style: italic
-    font-weight: normal
-    src: local('Athelas Italic'), url('../fonts/Athelas-Italic.woff') format('woff')
+    @font-face
+        font-family: 'Athelas'
+        font-style: italic
+        font-weight: normal
+        src: local('Athelas Italic'), url('../fonts/Athelas-Italic.woff') format('woff')
 
-@font-face
-    font-family: 'Athelas'
-    font-style: normal
-    font-weight: bold
-    src: local('Athelas Bold'), url('../fonts/Athelas-Bold.woff') format('woff')
+    @font-face
+        font-family: 'Athelas'
+        font-style: normal
+        font-weight: bold
+        src: local('Athelas Bold'), url('../fonts/Athelas-Bold.woff') format('woff')
 
-@font-face
-    font-family: 'Athelas'
-    font-style: italic
-    font-weight: bold
-    src: local('Athelas Bold Italic'), url('../fonts/Athelas-BoldItalic.woff') format('woff')
+    @font-face
+        font-family: 'Athelas'
+        font-style: italic
+        font-weight: bold
+        src: local('Athelas Bold Italic'), url('../fonts/Athelas-BoldItalic.woff') format('woff')
 
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans&display=swap')
     
 $dark-blue: #030C1C
 $mid-grey: #989898
@@ -53,11 +55,14 @@ body
     margin: 0
     background-color: $dark-blue
     color: white
-    font-family: Athelas, sans-serif
+    font-family: 'Work Sans', sans-serif
     overflow-x: hidden
 
     @include desktop
         font-size: 20px
+
+h1, h2, h3, h4, h5, h6
+    font-family: 'Crimson Text', serif
 
 .call
     padding: 0 20px 0 2px
@@ -151,12 +156,36 @@ header
         .menu-toggle, .menu-close
             display: none
 
-section
+section, main
     @include phone
         padding: $page-margin
 
     @include desktop
         padding: (0.5 * $page-margin) $page-margin
+
+main
+    h1
+        @include phone
+            text-align: center
+
+    img
+        width: 100vw
+        margin-left: -$page-margin
+
+
+    p
+        text-align: justify
+
+    .equipe
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+        img
+            width: 40vw
+
+        .info
+            width: 40vh
 
 #inicio
     padding: 0
