@@ -34,32 +34,42 @@ html
                 .mySlides.fade
                     img(src="../img/ambiente/salaAtendimento1.jpg", alt="Imagens do escritório")
                     .text
-                        h1 Lorem Ipsum
-                        p
-                            | Dolor sit amet consectur et.
+                        h2 Escritório de Advocacia
                             br
-                            | Lorem ipsum dolor sit amet
-                        a.call Link to action
+                            | Diogenes da Cunha Lima
+                        p
+                            |Há mais de 60 anos
+                            br
+                            | lalaal...
 
                 div.mySlides.fade
                     img(src="../img/ambiente/salaAtendimento2.jpg", alt="Imagens do escritório")
                     div.text
-                        h1 Lorem Ipsum
+                        h1 Nossa História
                         p
-                            | Dolor sit amet consectur et.
+                            | Conheça mais sobre o escritório
                             br
-                            | Lorem ipsum dolor sit amet
-                        a.call Link to action     
+                            | lalaa
+                        a.call Nossa História     
 
                 div.mySlides.fade
                     img(src="../img/ambiente/salaReuniao.jpg", alt="Imagens do escritório")
                     div.text
-                        h1 Lorem Ipsum
+                        h1 Equipe
                         p
-                            | Dolor sit amet consectur et.
+                            | Nossa equipe é formada por 10 advogados
                             br
-                            | Lorem ipsum dolor sit amet
-                        a.call Link to action
+                            | prontos a te atender
+                        a.call Equipe
+                div.mySlides.fade
+                    img(src="../img/professor.jpg", alt="Imagens do escritório")
+                    div.text
+                        h1 Professor Diogenes
+                        p
+                            | Conheça mais sobre a história do professor e poeta
+                            br
+                            | Professor Diogenes da Cunha Lima
+                        a.call O professor
 
                 a.prev(onclick="plusSlides(-1)") &#10094;
                 a.next(onclick="plusSlides(1)") &#10095;
@@ -112,16 +122,16 @@ html
                                     span.close &times;
                                     h2 Direito Civil
                                 .modal-body
-                                    p O direito Civil é isso isso
+                                    p  O Direito Civil é uma das vertentes do Direito Privado cujo objetivo é determinar como as pessoas devem se relacionar e agir em sociedade, como por exemplo, o direito do nascituro, o casamento, a sucessão familiar por meio da herança e do legado, entre outros aspectos legais comuns as relações de uma sociedade civilizada.
 
                     .area.card#myBtn
-                        img.area-icon(src="../img/areasAtuacao/criminal.png", alt="")
+                        img.area-icon(src="../img/areasAtuacao/criminal.svg", alt="")
                         .container
                             h2 Direito Criminal
                             a(href="#myBtn") Saiba mais
 
                     .area.card#myBtn
-                        img.area-icon(src="../img/areasAtuacao/administrativo.png", alt="")
+                        img.area-icon(src="../img/areasAtuacao/imobiliario.svg", alt="")
                         .container
                             h2 Direito Imobiliário
                             a(href="#myBtn") Saiba mais
@@ -133,7 +143,7 @@ html
                             a(href="#myBtn") Saiba mais
 
                     .area.card#myBtn
-                        img.area-icon(src="../img/areasAtuacao/constitucional.png", alt="")
+                        img.area-icon(src="../img/areasAtuacao/trabalhista.svg", alt="")
                         .container
                             h2 Direito Trabalhista
                             a(href="#myBtn") Saiba mais
@@ -151,16 +161,28 @@ html
                     textarea(placeholder="Mensagem", cols="30", rows="10")
                     input(type="submit", value="Enviar")
             .metade
-                img(src="../img/localizacao-icon.png", alt="")
-                p Av. Hermes da Fonseca, 957 - Tirol, Natal - RN, 59014-555
-                img(src="../img/telefone-icon.png", alt="")
-                p (84) 3216-2300
+                p 
+                    img(src="../img/localizacao-icon.png", alt="")      
+                    |       Endereço:
+                    br
+                    br
+                    | Av. Hermes da Fonseca, 957 - Tirol, Natal - RN, 59014-555
+                    
+                p    
+                    img(src="../img/telefone-icon.png", alt="")
+                    | Telefone: (84) 3216-2300
+                    br
+                    br
+                    | Whatsapp: (84) 99407-4243
 
         iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6915.51224628771!2d-35.20085893158456!3d-5.794211887775996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3001ba5232eeb%3A0xc6d2ce6d9f807733!2sEscrit%C3%B3rio%20Advocacia%20Professor%20Di%C3%B3genes%20Cunha%20Lima!5e0!3m2!1spt-BR!2sbr!4v1572312689972!5m2!1spt-BR!2sbr")
 
         footer
             img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
-            p Desenvolvido por Eduardo e Jemima
+            p Desenvolvido por 
+                a(href="https://edusrmt.github.io/")  Eduardo Sarmento 
+                |  e 
+                a(href="https://jemimad.github.io/")  Jemima Dias
 
         script(src="../js/carousel.js")
         script(src="../js/modal.js")
