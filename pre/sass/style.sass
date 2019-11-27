@@ -268,7 +268,6 @@ section
     display: flex
     flex-direction: row
     align-items: center
-    height: 58vh
 
     .metade
         display: flex
@@ -291,7 +290,6 @@ section
     @include desktop
         p
             line-height: 2rem
-
         .call
             margin-bottom: 0
 
@@ -340,10 +338,78 @@ section
     .area + .area
         @include phone
             margin-top: 10px    
-    
+    .card
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+        transition: 0.3s
+        width: 40%
+        margin-left: 10px
+        margin-right: 10px
+
+    .card:hover
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+
+    .container
+        padding: 2px 16px
+
     img
         border: none
         width: 70px
+
+    /* The Modal (background) */
+    .modal
+        display: none
+        position: fixed
+        z-index: 1
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        background-color: rgba(0, 0, 0, 0.5)
+    
+    
+    /* Modal Content */
+    .modal-content
+        margin: 10% auto
+        width: 60%
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17)
+        animation-name: modalopen
+        animation-duration: 1s
+    
+    .modal-header h2, .modal-footer h3
+        margin: 0
+
+    .modal-header
+        background: #FFFFFF
+        padding: 15px
+        color: $dark-blue
+        border-top-left-radius: 5px
+        border-top-right-radius: 5px
+        text-align: center
+
+
+    .modal-body
+        padding: 10px 20px
+        background: #fff
+        color: $dark-blue
+
+
+    .close
+        color: $dark-blue
+        float: right
+        font-size: 30px
+    
+    .close:hover, .close:focus
+        color: $dark-blue
+        text-decoration: none
+        cursor: pointer
+
+    /* Add Animation */
+    @keyframes modalopen
+        from
+            opacity: 0 
+        to 
+            opacity: 1
 
 #contato
     @include desktop       

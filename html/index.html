@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
   </head>
   <body>
     <header>
@@ -22,19 +23,19 @@
     </header>
     <section id="inicio">
       <div class="slideshow-container">
-        <div class="mySlides fade"><img src="../img/slider-one.jpg" alt="Imagens do escritório">
+        <div class="mySlides fade"><img src="../img/ambiente/salaAtendimento1.jpg" alt="Imagens do escritório">
           <div class="text">
             <h1>Lorem Ipsum</h1>
             <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a class="call">Link to action</a>
           </div>
         </div>
-        <div class="mySlides fade"><img src="../img/slider-two.jpg" alt="Imagens do escritório">
+        <div class="mySlides fade"><img src="../img/ambiente/salaAtendimento2.jpg" alt="Imagens do escritório">
           <div class="text">
             <h1>Lorem Ipsum</h1>
             <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a class="call">Link to action     </a>
           </div>
         </div>
-        <div class="mySlides fade"><img src="../img/slider-three.jpg" alt="Imagens do escritório">
+        <div class="mySlides fade"><img src="../img/ambiente/salaReuniao.jpg" alt="Imagens do escritório">
           <div class="text">
             <h1>Lorem Ipsum</h1>
             <p>Dolor sit amet consectur et.<br>Lorem ipsum dolor sit amet</p><a class="call">Link to action</a>
@@ -44,40 +45,69 @@
     </section>
     <section id="sobre">
       <div class="metade">
-        <h1>Sobre <br class="mobile">nós</h1>
-        <p>
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet.
-        </p><a class="call">Nossa história           </a>
+        <h1>Sobre <br class="mobile">nós
+          <h3>Missão</h3>
+          <p>
+            Assegurar com equilíbrio, a realização do Direito, garantindo, através de
+            profissionais éticos e competentes, a segurança da assistência continuada,
+            contribuindo, como advocacia de excelência, para que a justiça aconteça e 
+            prevaleça na sociedade.
+            
+          </p>
+          <h3>Visão</h3>
+          <p>
+            Ver o escritório como uma Instituição amada e respeitada no Estado. Nossos advogados são selecionados entre os melhores e procuram dar assistência jurídica a nível de  excelência. A cada dia um pouco mais.
+            
+          </p>
+          <h3>Valores</h3>
+          <p>
+            São valores do Escritório o sentido e alcance das leis, doutrinas e 
+            jurisprudência; tratar o cliente com respeito e amizade, os Juízes e ao 
+            Ministério Público como parceiros no sentido de busca da Justiça; Fazer do “Pro Bono” um trabalho agradável e útil.
+            
+          </p>
+        </h1><a class="call">Nossa história           </a>
       </div>
-      <div class="metade"><img src="../img/escritorio.png" alt="Escritório"></div>
+      <div class="metade"><img src="../img/ambiente/recepcao.jpg" alt="Escritório"></div>
     </section>
     <section id="areas">
       <h1>
          Áreas de <br class="mobile">atuação</h1>
       <div class="areas-container">
-        <div class="area"><img class="area-icon" src="../img/administrativo.png" alt="">
-          <h2>Administrativo</h2>
+        <div class="area card" id="modal-btn"><img class="area-icon" src="../img/areasAtuacao/civil.png" alt="">
+          <div class="container">
+            <h2>Direito Civil</h2><a href="#modal-btn">Saiba mais</a>
+          </div>
+          <div class="modal" id="my-modal">
+            <div class="modal-content">
+              <div class="modal-header"><span class="close">&times;</span>
+                <h2>Direito Civil</h2>
+              </div>
+              <div class="modal-body">
+                <p>O direito Civil é isso isso</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="area"><img class="area-icon" src="../img/civil.png" alt="">
-          <h2>Civil</h2>
+        <div class="area card" id="myBtn"><img class="area-icon" src="../img/areasAtuacao/criminal.png" alt="">
+          <div class="container">
+            <h2>Direito Criminal</h2><a href="#myBtn">Saiba mais</a>
+          </div>
         </div>
-        <div class="area"><img class="area-icon" src="../img/criminal.png" alt="">
-          <h2>Criminal</h2>
+        <div class="area card" id="myBtn"><img class="area-icon" src="../img/areasAtuacao/administrativo.png" alt="">
+          <div class="container">
+            <h2>Direito Imobiliário</h2><a href="#myBtn">Saiba mais</a>
+          </div>
         </div>
-        <div class="area"><img class="area-icon" src="../img/constitucional.png" alt="">
-          <h2>Constitucional</h2>
+        <div class="area card" id="myBtn"><img class="area-icon" src="../img/areasAtuacao/constitucional.png" alt="">
+          <div class="container">
+            <h2>Direito Consumerista</h2><a href="#myBtn">Saiba mais</a>
+          </div>
+        </div>
+        <div class="area card" id="myBtn"><img class="area-icon" src="../img/areasAtuacao/constitucional.png" alt="">
+          <div class="container">
+            <h2>Direito Trabalhista</h2><a href="#myBtn">Saiba mais</a>
+          </div>
         </div>
       </div>
     </section>
@@ -101,5 +131,6 @@
       <p>Desenvolvido por Eduardo e Jemima</p>
     </footer>
     <script src="../js/carousel.js"></script>
+    <script src="../js/modal.js"></script>
   </body>
 </html>

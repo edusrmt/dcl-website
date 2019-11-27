@@ -276,7 +276,6 @@ header .main-menu li a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 58vh;
 }
 #sobre .metade {
   display: flex;
@@ -319,6 +318,9 @@ header .main-menu li a {
 
 #areas {
   background-color: white;
+  /* The Modal (background) */
+  /* Modal Content */
+  /* Add Animation */
 }
 @media screen and (min-width: 900px) {
   #areas .areas-container {
@@ -363,9 +365,74 @@ header .main-menu li a {
     margin-top: 10px;
   }
 }
+#areas .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#areas .card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+#areas .container {
+  padding: 2px 16px;
+}
 #areas img {
   border: none;
   width: 70px;
+}
+#areas .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#areas .modal-content {
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+#areas .modal-header h2, #areas .modal-footer h3 {
+  margin: 0;
+}
+#areas .modal-header {
+  background: #FFFFFF;
+  padding: 15px;
+  color: #030C1C;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+}
+#areas .modal-body {
+  padding: 10px 20px;
+  background: #fff;
+  color: #030C1C;
+}
+#areas .close {
+  color: #030C1C;
+  float: right;
+  font-size: 30px;
+}
+#areas .close:hover, #areas .close:focus {
+  color: #030C1C;
+  text-decoration: none;
+  cursor: pointer;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 900px) {

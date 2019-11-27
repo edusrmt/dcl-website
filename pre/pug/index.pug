@@ -5,6 +5,9 @@ html
         meta(charset="utf-8")
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         link(rel="stylesheet", href="../css/style.css")
+        link(rel="shortcut icon", type="image/x-icon" href="../img/logo.ico")
+
+
     body
         header
             .navegacao
@@ -29,7 +32,7 @@ html
         section#inicio
             .slideshow-container
                 .mySlides.fade
-                    img(src="../img/slider-one.jpg", alt="Imagens do escritório")
+                    img(src="../img/ambiente/salaAtendimento1.jpg", alt="Imagens do escritório")
                     .text
                         h1 Lorem Ipsum
                         p
@@ -39,7 +42,7 @@ html
                         a.call Link to action
 
                 div.mySlides.fade
-                    img(src="../img/slider-two.jpg", alt="Imagens do escritório")
+                    img(src="../img/ambiente/salaAtendimento2.jpg", alt="Imagens do escritório")
                     div.text
                         h1 Lorem Ipsum
                         p
@@ -49,7 +52,7 @@ html
                         a.call Link to action     
 
                 div.mySlides.fade
-                    img(src="../img/slider-three.jpg", alt="Imagens do escritório")
+                    img(src="../img/ambiente/salaReuniao.jpg", alt="Imagens do escritório")
                     div.text
                         h1 Lorem Ipsum
                         p
@@ -67,23 +70,30 @@ html
                     | Sobre 
                     br.mobile
                     | nós
-                p.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
+
+                    h3 Missão
+                    
+                    p.
+                        Assegurar com equilíbrio, a realização do Direito, garantindo, através de
+                        profissionais éticos e competentes, a segurança da assistência continuada,
+                        contribuindo, como advocacia de excelência, para que a justiça aconteça e 
+                        prevaleça na sociedade.
+
+                    h3 Visão
+                    
+                    p.
+                        Ver o escritório como uma Instituição amada e respeitada no Estado. Nossos advogados são selecionados entre os melhores e procuram dar assistência jurídica a nível de  excelência. A cada dia um pouco mais.
+
+                    h3 Valores
+
+                    p.
+                        São valores do Escritório o sentido e alcance das leis, doutrinas e 
+                        jurisprudência; tratar o cliente com respeito e amizade, os Juízes e ao 
+                        Ministério Público como parceiros no sentido de busca da Justiça; Fazer do “Pro Bono” um trabalho agradável e útil.
+
                 a.call Nossa história           
             .metade
-                img(src="../img/escritorio.png", alt="Escritório")
+                img(src="../img/ambiente/recepcao.jpg", alt="Escritório")
 
         section#areas
             h1 
@@ -91,18 +101,43 @@ html
                 br.mobile
                 | atuação
             .areas-container
-                    .area
-                        img.area-icon(src="../img/administrativo.png", alt="")
-                        h2 Administrativo
-                    .area
-                        img.area-icon(src="../img/civil.png", alt="")
-                        h2 Civil
-                    .area
-                        img.area-icon(src="../img/criminal.png", alt="")
-                        h2 Criminal
-                    .area
-                        img.area-icon(src="../img/constitucional.png", alt="")
-                        h2 Constitucional
+                    .area.card#modal-btn
+                        img.area-icon(src="../img/areasAtuacao/civil.png", alt="")
+                        .container
+                            h2 Direito Civil
+                            a(href="#modal-btn") Saiba mais
+                        div#my-modal.modal
+                            .modal-content
+                                .modal-header
+                                    span.close &times;
+                                    h2 Direito Civil
+                                .modal-body
+                                    p O direito Civil é isso isso
+
+                    .area.card#myBtn
+                        img.area-icon(src="../img/areasAtuacao/criminal.png", alt="")
+                        .container
+                            h2 Direito Criminal
+                            a(href="#myBtn") Saiba mais
+
+                    .area.card#myBtn
+                        img.area-icon(src="../img/areasAtuacao/administrativo.png", alt="")
+                        .container
+                            h2 Direito Imobiliário
+                            a(href="#myBtn") Saiba mais
+                    
+                    .area.card#myBtn
+                        img.area-icon(src="../img/areasAtuacao/constitucional.png", alt="")
+                        .container
+                            h2 Direito Consumerista
+                            a(href="#myBtn") Saiba mais
+
+                    .area.card#myBtn
+                        img.area-icon(src="../img/areasAtuacao/constitucional.png", alt="")
+                        .container
+                            h2 Direito Trabalhista
+                            a(href="#myBtn") Saiba mais
+                            
 
         section#contato
             .metade
@@ -128,3 +163,4 @@ html
             p Desenvolvido por Eduardo e Jemima
 
         script(src="../js/carousel.js")
+        script(src="../js/modal.js")
