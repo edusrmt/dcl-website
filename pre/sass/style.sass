@@ -156,6 +156,10 @@ header
         .menu-toggle, .menu-close
             display: none
 
+        img
+            max-height: 40%
+
+
 section, main
     @include phone
         padding: $page-margin
@@ -167,6 +171,8 @@ main.no-padding
     padding: 0
 
 main
+    padding-top: 0
+
     h1
         @include phone
             text-align: center
@@ -174,6 +180,12 @@ main
     img
         width: 100vw
         margin-left: -$page-margin
+        
+        @include desktop
+            max-height: 50vh
+            object-fit: cover
+
+    
 
 
     p
@@ -619,4 +631,27 @@ footer
 
 h1
     text-transform: uppercase
+
+#splash
+    background-image: url('../img/splash.jpg')
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    width: 100vw
+    z-index: 2
+
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+
+    img
+        margin: 0 auto
+
+    .splash-content
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
 

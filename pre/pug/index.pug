@@ -9,6 +9,11 @@ html
         script(src="https://kit.fontawesome.com/36213c14f9.js", crossorigin="anonymous")
 
     body
+        #splash
+            div.splash-content(onclick="splash();")
+                img.logo(src="../img/logo.png", alt="Logotipo do Escritório")
+                h4 Mais de 60 anos de história
+
         include includes/header.pug
 
         section#inicio
@@ -16,22 +21,19 @@ html
                 .mySlides.fade
                     img(src="../img/ambiente/salaAtendimento1.jpg", alt="Imagens do escritório")
                     .text
-                        h2 Escritório de Advocacia
+                        h1 Escritório de Advocacia
                             br
                             | Diogenes da Cunha Lima
                         p
                             |Há mais de 60 anos
                             br
-                            | lalaal...
+                            | fazendo justiça
 
                 div.mySlides.fade
                     img(src="../img/ambiente/salaAtendimento2.jpg", alt="Imagens do escritório")
                     div.text
                         h1 Nossa História
-                        p
-                            | Conheça mais sobre o escritório
-                            br
-                            | lalaa
+                        p Conheça mais sobre o escritório
                         a.call(href="../html/historia.html") Nossa História    
 
                 div.mySlides.fade
@@ -45,7 +47,7 @@ html
                         a.call(href="../html/equipe.html") Equipe
 
                 div.mySlides.fade
-                    img(src="../img/professor.jpg", alt="Imagens do escritório")
+                    img(src="../img/equipe/diogenes.jpg", alt="Imagens do escritório")
                     div.text
                         h1 Professor Diogenes
                         p
@@ -122,41 +124,51 @@ html
                     .modal-inner
                         h2 Direito Civil
                         p.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
-                            Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
-                            ipsam repudiandae sint laborum sapiente?
+                            Direito Civil é o ramo do Direito que engloba o conjunto de normas jurídicas
+                            responsáveis por regular os direitos e obrigações de ordem privada em relação as pessoas,
+                            seus bens e suas relações.
                 #criminal.modal
                     a(href="#areas" class="close")
                     .modal-inner
                         h2 Direito Criminal
-                        p.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
-                            Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
-                            ipsam repudiandae sint laborum sapiente?
+                        p
+                            |Também conhecido como Direito Criminal, o Direito Penal é o ramo responsável por atribuir penas aos delitos de acordo com as normas originadas no Poder Legislativo.
+                            |Tais penas permitem preservar a sociedade ao mesmo tempo que proporcionam o seu desenvolvimento.
+                            br
+                            | Nessa área contamos com o advogado Gabriel Lucas Moura de Souza:
+                            br
+                            | Graduação em Direito pela Universidade Federal do Rio Grande do Norte
+                            br                            
+                            | Especialista em Direito Processual Penal pela Faculdade Damásio.
+                            br
+                            | Professor Universitário de Direito Penal e Direito Processual Penal (Universidade
+                            | Potiguar/Laureate)
+                            br
+                            | Pesquisador nas temáticas de nulidades, provas, dosimetria da pena e colaboração
+                            | premiada.
+                            br
+                            | Atuação na advocacia criminal.
                 #imobiliario.modal
                     a(href="#areas" class="close")
                     .modal-inner
                         h2 Direito Imobiliário
                         p.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
-                            Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
-                            ipsam repudiandae sint laborum sapiente?
+                            Direito Imobiliário é o ramo do direito privado responsável por regular as relações jurídicas decorrentes da propriedade de bens imóveis.
+                            E envolve, dessa forma, as discussões legais sobre objetos imóveis.
                 #constitucional.modal
                     a(href="#areas" class="close")
                     .modal-inner
                         h2 Direito Constitucional
                         p.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
-                            Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
-                            ipsam repudiandae sint laborum sapiente?
+                            Direito constitucional é o ramo do direito público interno dedicado
+                            à análise e interpretação das normas constitucionais.
                 #trabalhista.modal
                     a(href="#areas" class="close")
                     .modal-inner
                         h2 Direito Trabalhista
                         p.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro quidem debitis.
-                            Nemo earum deserunt saepe tempora. Illo corrupti nulla magni, nemo eaque temporibus consectetur
-                            ipsam repudiandae sint laborum sapiente? 
+                            Direito do trabalho é o ramo jurídico que estuda as relações de trabalho. Esse direito é composto de conjuntos de normas, princípios e outras fontes jurídicas
+                            que regem as relações de trabalho, regulamentando a condição jurídica dos trabalhadores. 
 
         section#contato
             .metade

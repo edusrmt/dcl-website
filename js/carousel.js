@@ -36,3 +36,9 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";
     clock = setTimeout(showSlides, 5000);
 }
+
+setTimeout(splash, 3000);
+
+function splash () {
+    document.getElementById("splash").style.display = "none";
+}

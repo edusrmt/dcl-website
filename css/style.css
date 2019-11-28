@@ -147,6 +147,9 @@ header .main-menu li a {
   header .menu-toggle, header .menu-close {
     display: none;
   }
+  header img {
+    max-height: 40%;
+  }
 }
 
 @media screen and (max-width: 899px) {
@@ -164,6 +167,9 @@ main.no-padding {
   padding: 0;
 }
 
+main {
+  padding-top: 0;
+}
 @media screen and (max-width: 899px) {
   main h1 {
     text-align: center;
@@ -172,6 +178,12 @@ main.no-padding {
 main img {
   width: 100vw;
   margin-left: -10vw;
+}
+@media screen and (min-width: 900px) {
+  main img {
+    max-height: 50vh;
+    object-fit: cover;
+  }
 }
 main p {
   text-align: justify;
@@ -684,6 +696,29 @@ footer p a {
 
 h1 {
   text-transform: uppercase;
+}
+
+#splash {
+  background-image: url("../img/splash.jpg");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#splash img {
+  margin: 0 auto;
+}
+#splash .splash-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
